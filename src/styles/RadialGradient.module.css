@@ -1,0 +1,14 @@
+.gradient {
+	opacity: 80%;
+	z-index: -99;
+	position: fixed;
+	top: -50%;
+	left: -60%;
+	bottom: 0;
+	right: 0;
+	background: rgb(87,44,210);
+	background: -moz-radial-gradient(circle, rgba(87,44,210,0.13489145658263302) 3%, rgba(87,44,210,0.05926120448179273) 21%, rgba(87,44,210,0) 100%);
+	background: -webkit-radial-gradient(circle, rgba(87,44,210,0.13489145658263302) 3%, rgba(87,44,210,0.05926120448179273) 21%, rgba(87,44,210,0) 100%);
+	background: radial-gradient(circle, rgba(87,44,210,0.13489145658263302) 3%, rgba(87,44,210,0.05926120448179273) 21%, rgba(87,44,210,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#572cd2",endColorstr="#572cd2",GradientType=1);
+}
