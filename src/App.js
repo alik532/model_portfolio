@@ -12,16 +12,16 @@ function App() {
     <div className="App">
       <RadialGradient/>
       <div className='header'>
-          <h4 className='header_link'>Портфолио</h4>
-          <h4 className='header_link'>Обо мне</h4>
-          <h4 className='header_link'>Контакты</h4>
+          <a className='header_link' href='#portfolio'>Портфолио</a>
+          <a className='header_link' href='#about'>Обо мне</a>
+          <a className='header_link' href='#contact'>Контакты</a>
       </div>
       <div className='hero'>
         <h1 className='hero_name'>MIRAS_TL</h1>
         <img src={heroPNG} alt='' className='hero_img'/>
       </div>
       <div className='container'>
-        <h1 className='section_header'>ПОРТФОЛИО</h1>
+        <h1 className='section_header' id='portfolio'>ПОРТФОЛИО</h1>
         <div className='portfolio_grid'>
           <div className='decor1 decor'></div><div className='decor2 decor'></div><div className='decor3 decor'></div><div className='decor4 decor'></div><div className='decor5 decor'></div><div className='decor6 decor'></div>
           {images.map((img, indx) => 
@@ -30,7 +30,7 @@ function App() {
         </div>
       </div>
       <div className='container'>
-        <h1 className='section_header'>ОБО МНЕ</h1>
+        <h1 className='section_header' id='about'>ОБО МНЕ</h1>
         <div className='about'>
             <img src={AboutPng} alt='' className='about_img'/>
             <div className='about_main_info'>
@@ -46,11 +46,11 @@ function App() {
             <p className='about_section_txt'>{work_exp}</p>
           </div>
           <div className='work_exp'>
-            <h1 className='about_section_header'>Моя истоия</h1>
+            <h1 className='about_section_header'>Моя история</h1>
             <p className='about_section_txt'>{story}</p>
           </div>
         </div>
-        <h1 className='section_header'>КОНТАКТЫ</h1>
+        <h1 className='section_header' id='contact'>КОНТАКТЫ</h1>
         <h5 className='contact'>Телефон:  +7 747 526 43 95</h5>
         <h5 className='contact'>Email:  example.info@gmail.com</h5>
         <div className='links'>
