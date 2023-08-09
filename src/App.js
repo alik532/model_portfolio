@@ -6,10 +6,20 @@ import AboutPng from './images/about.png'
 import {story, work_exp} from './data'
 import instPNG from './images/insta.png'
 import whatsappPNG from './images/whatsapp.png'
+import { useState } from 'react';
+import ImageModal from './components/ImageModal';
 
 function App() {
+
+  const [openImg, setOpenImg] = useState(null)
+  
+  const openAnImage = (img) => {
+    setOpenImg(img)
+  }
+
   return (
     <div className="App">
+      <ImageModal img={openImg} setOpenImg={setOpenImg}/>
       <RadialGradient/>
       <div className='header'>
           <a className='header_link' href='#portfolio'>Портфолио</a>
@@ -25,7 +35,7 @@ function App() {
         <div className='portfolio_grid'>
           <div className='decor1 decor'></div><div className='decor2 decor'></div><div className='decor3 decor'></div><div className='decor4 decor'></div><div className='decor5 decor'></div><div className='decor6 decor'></div>
           {images.map((img, indx) => 
-            <img src={img} alt='' className={`portfolio_img ${indx % 3 === 0 ? null : 'glowing'}`}  style={{flexGrow: indx % 2 === 0 ? '1' : '1', maxWidth: '60%'}}/>  
+            <img onClick={() => openAnImage(img)} src={img} alt='' className={`portfolio_img ${indx % 3 === 0 ? null : 'glowing'}`}  style={{flexGrow: indx % 2 === 0 ? '1' : '1', maxWidth: '60%'}}/>  
           )}
         </div>
       </div>

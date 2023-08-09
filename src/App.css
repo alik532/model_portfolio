@@ -37,7 +37,7 @@
 	background-color: #A0B9D740;
 	border-radius: 30px;
 	backdrop-filter: blur(10px);
-	z-index: 100;
+	z-index: 4;
 	position: fixed;
 	top: 5%;
 	left: 180px;
@@ -293,6 +293,13 @@
 	.container {
 		margin: 0px 20px;
 	}
+	.header_link {
+		font-size: 38px;
+	}
+	.header_link:hover::after {
+		display: none;
+		color: black;
+	}
 	.hero_name {
 		font-weight: 400;
 		z-index: 1;
@@ -315,6 +322,23 @@
 		width: 100%;
 		flex-grow: 1;
 	}
+	.about {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.about_img {
+		align-self: center;
+		margin: 40px 0px;
+		width: 90%;
+	}
+	.about_header {
+		margin-bottom: 40px;
+		font-size: 96px;
+	}
+	.about_txt {
+		font-size: 44px;
+	}
 	.header {
 		border-radius: 0px;
 		padding: 0px 50px;
@@ -329,10 +353,12 @@
 		justify-content: space-between;
 	}
 	.story {
+		font-size: 44px;
 		width: 45%;
 	}
 	.work_exp {
 		width: 45%;
+		font-size: 44px;
 	}
 	.App {
 		position: initial;
